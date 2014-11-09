@@ -35,6 +35,20 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         
+        nfc.addTagDiscoveredListener(
+        		function (nfcEvent) {
+        			console.log(JSON.stringify(nfcEvent.tag.id[1]));
+//        			$('#enter-number').text("Alok");
+        			document.getElementById("enter-number").value = JSON.stringify(nfcEvent.tag.id);
+        		},
+        		function(){
+        			console.log("waiting for tag");
+        		},
+        		function (error) {
+        			console.log("Error");
+        			console.log(error);
+        		}
+        );
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -90,11 +104,11 @@ var app = {
         insertTable(table_list,listFields,insertP);
         });
         
-        $('#listing').live(function(){
-        console.log('yo');
-        inthislist = $(this).html();
-        console.log(inthislist);
-        });
+//        $('#listing').live(function(){
+//        console.log('yo');
+//        inthislist = $(this).html();
+//        console.log(inthislist);
+//        });
         
         
         
