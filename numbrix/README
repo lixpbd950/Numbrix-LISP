@@ -1,0 +1,29 @@
+Operation System: (1)Linux (Ubuntu)
+                  (2)Windows
+
+Operating Environment:(1)Clisp (run on Emacs+Slime+sbcl) in Linux
+                      (2)Allegro Clisp in Windows
+
+
+1.Please enter (load "~/numbrix.lisp") to load this file
+  (where"~/" is the directory and double quotation marks is required);
+2.Please then enter (numbrix) to run the main program;
+3.Choose one of these manipulations you want to take:
+  Press 'i' for numbrix instructions;
+  Press 'n' to load a board and run a new game;
+  Press 'q' to quit the game;
+4.If want to start a game,please press 'n' and enter the board file you want to load. 
+  For example, if the file "board1" is located in directory "Documents/numbrix/boards/board1", 
+  then just type "Documents/numbrix/boards/board1" with no double quotation marks;
+5.After loading the new board, press 'r' to return the welcome interface, press 'a' to solve the board automatically;
+6.After finishing the game, press 'n' to load another new game, press 'r' to return the welcome interface.
+
+note:1. The programme can only support 1*1 board to 99*99 board, otherwise UI will be influenced;
+     2. 3 boards are provided to test the program. They are in the folder 'boards';
+     3. If new board is created to test the program, the board form should be as follows:
+        1 - 3
+        - - -
+        7 - 9
+        which means, unknown numbers should be indicated by '-' and any two elements (numbers and '-'s) 
+        in the same row should be separated by blanks with no other punctuation,
+        otherwise the program could not show the board well.
